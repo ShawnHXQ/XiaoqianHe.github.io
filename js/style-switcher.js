@@ -15,15 +15,19 @@ window.addEventListener("scroll", () => {
 const alternateStyles = document.querySelectorAll(".alternate-style"); 
 function setActiveStyle(color)
 {
+    localStorage.setItem("color",color);
+    changeColor(); 
+}
+function changeColor(){
     alternateStyles.forEach((style) =>{
-        if(color === style.getAttribute("title"))
+        if(localStorage.getItem("color") === style.getAttribute("title"))
         {
             style.removeAttribute("disabled"); 
         }
         else{
             style.setAttribute("disabled", "true"); 
         }
-    })
+    });
 }
 /*==========================theme light and dark mode =========================*/ 
 const dayNight = document.querySelector(".day-night");
