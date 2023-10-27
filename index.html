@@ -46,8 +46,8 @@
                         <div class="row">
                             <div class="home-info padd-15">
                                 <h3 class="hello">Hello, my name is <span class="name">Xiaoqian He</span></h3>
-                                <h3 class="my-profession">I'm a <span class="typing">CS Sutdent</span></h3>
-                                <p>I am a current student at Queens College and I will be graduating in May 2023.</p>
+                                <h3 class="my-profession">I'm a <span class="typing">Programmer</span></h3>
+                                <p>I'm a FullStack Developer.</p>
                                 <a href="cv/Resume.pdf" class="btn">View CV</a>
                             </div>
                             <div class="home-img padd-15">
@@ -77,10 +77,10 @@
                                     <div class="personal-info padd-15" >
                                         <div class="row">
                                             <div class="info-item padd-15">
-                                                <p>Brithday: <span> 01 sep 1996</span></p>
+                                                <p>Brithday: <span> 01 sep 1995</span></p>
                                             </div>
                                             <div class="info-item padd-15">
-                                                <p>Age: <span> 26 </span></p>
+                                                <p>Age: <span> 27 </span></p>
                                             </div>
                                             <!-- <div class="info-item padd-15">
                                                 <p>Website: <span> https://shawnhxq.github.io/XiaoqianHe.github.io/</span></p>
@@ -116,24 +116,24 @@
                                                 </div>
                                             </div>
                                             <div class="skill-item padd-15">
-                                                <h5>C++</h5>
+                                                <h5>C# .Net</h5>
                                                 <div class="progress">
-                                                    <div class="progress-in" style="Width: 66%"></div>
-                                                    <div class="skill-percent">66%</div>
+                                                    <div class="progress-in" style="Width: 88%"></div>
+                                                    <div class="skill-percent">88%</div>
                                                 </div>
                                             </div>
                                             <div class="skill-item padd-15">
-                                                <h5>Python</h5>
+                                                <h5>Angular</h5>
                                                 <div class="progress">
-                                                    <div class="progress-in" style="Width: 76%"></div>
-                                                    <div class="skill-percent">76%</div>
+                                                    <div class="progress-in" style="Width: 80%"></div>
+                                                    <div class="skill-percent">80%</div>
                                                 </div>
                                             </div>
                                             <div class="skill-item padd-15">
                                                 <h5>JavaScript</h5>
                                                 <div class="progress">
-                                                    <div class="progress-in" style="Width: 76%"></div>
-                                                    <div class="skill-percent">76%</div>
+                                                    <div class="progress-in" style="Width: 85%"></div>
+                                                    <div class="skill-percent">85%</div>
                                                 </div>
                                             </div>
                                             <div class="skill-item padd-15">
@@ -277,6 +277,7 @@
                             </div>
                              <!-- contact info item end -->
                         </div>
+                        <!-- EMAIL INPUT-->
                         <h3 class="contact-title">SEND ME EMAIL </h3>
                         <h4 class="contact-sub-title">I'M VERY RESPOSIVE TO MESSAGES </h4>
                         <!-- contact from -->
@@ -295,6 +296,7 @@
                                     </div>
                                     <div class="form-item col-6 padd-15">
                                         <div class="form-group">
+                                            
                                             <input type="email" class="form-control" placeholder="Email">
                                         </div>
                                     </div>
@@ -346,8 +348,22 @@
         </div>
         <!-- Style Switch end -->
         <!-- Js file -->
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
         <script src = "js/script.js"> </script>
         <script src = "js/style-switcher.js"></script>
+        <script>
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "username",
+                Password : "password",
+                To : 'them@website.com',
+                From : "you@isp.com",
+                Subject : "This is the subject",
+                Body : "And this is the body"
+            }).then(
+            message => alert(message)
+            );
+        </script>
     </body>
 </html>
